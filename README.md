@@ -23,7 +23,7 @@ To use this library in your Android project, follow these steps:
 Add the following dependency to your app module's `build.gradle` file:
 
 ```groovy
-implementation 'com.example:library:1.0.0'
+implementation 'com.easit.snipe:library:1.0.0'
 ```
 
 Replace `com.example:library:1.0.0` with the actual dependency information once you release the library.
