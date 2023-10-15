@@ -1,25 +1,43 @@
 package com.easit.floatingbuttonsnipingtool
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.provider.Settings
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.core.app.ActivityCompat
 import com.easit.floatingbuttonsnipingtool.ui.theme.FloatingButtonSnipingToolTheme
+import java.io.File
 
 class MainActivity : ComponentActivity() {
 
@@ -29,23 +47,95 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             FloatingButtonSnipingToolTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxSize()
-                    ) {
-                        //
-                        Button(onClick = {
-                            launchScanner()
-                        }) {
-                            //
-                        }
-                    }
+                    MainScreen(cxt = this@MainActivity, int = intent)
                 }
+            }
+        }
+    }
+
+    @Composable
+    fun MainScreen(cxt: Context, int: Intent) {
+        //Check for image scanner value
+        var scannedImageURI = ""
+        val context = LocalContext.current
+        val show = remember { mutableStateOf<Boolean>(false) }
+        val showBitmap = remember { mutableStateOf<Bitmap?>(null) }
+
+        try {
+            scannedImageURI = int.getStringExtra("ScannedImageURI").toString()
+            if (scannedImageURI.isNotBlank() && scannedImageURI != "" && scannedImageURI != "null"){
+                val path =
+                    "${context.filesDir.path}/SCAN.$scannedImageURI.jpg"
+                val fileURI = Uri.fromFile(File(path))
+                showBitmap.value = MediaStore.Images.Media.getBitmap(context.contentResolver, Uri.parse(fileURI.toString()))
+                show.value = true
+            }
+        }catch (e: Exception){
+            Toast.makeText(context, e.message.toString(), Toast.LENGTH_LONG).show()
+        }
+
+        //
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(24.dp)
+                .verticalScroll(state = ScrollState(0)),
+            verticalArrangement = Arrangement.spacedBy(24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            //
+            Text(
+                text = "Floating Sniping Tool",
+                fontWeight = FontWeight.Bold,
+                fontSize = 26.sp,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            Text(
+                text = "Instruction",
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            //
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                Text(text = "Click 'launch' to start")
+                Text(text = "2. Accept all permissions.")
+                Text(text = "2. On prompt, drag over area to screenshot.")
+            }
+
+            //
+            Button(
+                onClick = {
+                    launchScanner()
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+            ) {
+                //
+                Text(text = "Launch")
+            }
+
+            //RESULT
+            Text(
+                text = "Result",
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            if (show.value){
+                showBitmap.value?.let { Image(bitmap = it.asImageBitmap(), contentDescription = "") }
             }
         }
     }
@@ -106,5 +196,13 @@ class MainActivity : ComponentActivity() {
         } else {
             Toast.makeText(this, "Service should start 1", Toast.LENGTH_SHORT).show()
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun FloatingSnipingToolPreview() {
+    FloatingButtonSnipingToolTheme() {
+        //MainScreen()
     }
 }

@@ -1,5 +1,6 @@
 package com.easit.floatingbuttonsnipingtool
 
+import android.app.Activity.RESULT_OK
 import android.content.Context
 import android.content.Intent
 import android.media.projection.MediaProjection
@@ -17,6 +18,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.core.app.ActivityCompat.startActivityForResult
+import androidx.core.content.ContextCompat.getSystemService
 import com.easit.floatingbuttonsnipingtool.ui.theme.FloatingButtonSnipingToolTheme
 
 class TransActivity : ComponentActivity() {
@@ -28,12 +31,27 @@ class TransActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            FloatingButtonSnipingToolTheme {
+            FloatingButtonSnipingToolTheme{
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = Color.Transparent
                 ) {
+
+                    val config = resources.configuration
+                    try {
+                        val configClass: Class<*> = config.javaClass
+                        if (configClass.getField("SEM_DESKTOP_MODE_ENABLED").getInt(configClass) ==
+                            configClass.getField("semDesktopModeEnabled").getInt(config)
+                        ) {
+                            DeX = true
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+
+                    startProjection()
+
                     Box (
                         modifier = Modifier
                             .fillMaxSize()
@@ -80,5 +98,7 @@ class TransActivity : ComponentActivity() {
             }
         }
     }
+
+
 
 }
