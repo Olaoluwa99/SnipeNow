@@ -50,8 +50,10 @@ To get started with SnipeNow, follow these simple steps:
 
 ## Screenshots
 
-![Screenshot 1](url_to_screenshot_1.png)
-![Screenshot 2](url_to_screenshot_2.png)
+![Image 1](https://i.ibb.co/Km44RmH/Snipe-Now-02.png)
+![Image 2](https://i.ibb.co/WWVsDG0/Snipe-Now-04.png)
+![Image 3](https://i.ibb.co/pdGt7ct/Snipe-Now-03.png)
+![Image 4](https://i.ibb.co/0c7n5j9/Snipe-Now-01.png)
 
 ## License
 
