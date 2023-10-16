@@ -48,12 +48,12 @@ To get started with SnipeNow, follow these simple steps:
 
 3. Customize the button's behavior and appearance in the app settings.
 
-## Screenshots
+## Screenshots!
 
-![Image 1](https://i.ibb.co/Km44RmH/Snipe-Now-02.png)
-![Image 2](https://i.ibb.co/WWVsDG0/Snipe-Now-04.png)
-![Image 3](https://i.ibb.co/pdGt7ct/Snipe-Now-03.png)
-![Image 4](https://i.ibb.co/0c7n5j9/Snipe-Now-01.png)
+![Image 1](https://i.ibb.co/VmTf7h3/Snipe-Now-02.png)
+![Image 2](https://i.ibb.co/QcZCgBq/Snipe-Now-02.png) 
+![Image 3](https://i.ibb.co/V3RWrc9/Snipe-Now-02.png)
+![Image 4](https://i.ibb.co/9W5dxmh/Snipe-Now-02.png) 
 
 ## License
 
