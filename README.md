@@ -3,7 +3,7 @@
 ![App Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQhYVhuvprIQljGmoyjgZWBoHILO2IDm2YpQ&usqp=CAU)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/your-username/snipe-now)](https://github.com/your-username/snipe-now/releases)
+[![Release](https://img.shields.io/github/v/release/your-username/snipe-now)](https://github.com/Olaoluwa99/SnipeNow/releases)
 
 SnipeNow is a versatile Android app that lets you capture screenshots and screen recordings with a simple floating button.
 
@@ -22,7 +22,7 @@ To get started with SnipeNow, follow these simple steps:
 1. If you'd like to explore the source code or contribute to the project, you can clone the GitHub repository:
 
    ```bash
-   git clone https://github.com/Olaoluwa99/snipe-now.git
+   git clone https://github.com/Olaoluwa99/SnipeNow.git
    ```
 
 ### Build the App (Optional)
@@ -62,4 +62,4 @@ Contributions are welcome! If you want to contribute to SnipeNow, please create 
 
 ## Support
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/your-username/snipe-now/issues).
+If you encounter any issues or have questions, please [open an issue](https://github.com/Olaoluwa99/SnipeNow/issues).
