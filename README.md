@@ -10,7 +10,8 @@ SnipeNow is a versatile Android app that lets you capture screenshots and screen
 ## Features
 
 - Quick and easy access to a floating snipe button.
-- Capture screenshots in a snap.
+- Capture selected area of screen as screenshots in a snap.
+- Relaunch app after sniping and show image.
 - Customize the button's position and appearance.
 
 ## Installation
