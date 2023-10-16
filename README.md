@@ -50,10 +50,10 @@ To get started with SnipeNow, follow these simple steps:
 
 ## Screenshots!
 
-![Image 1](https://i.ibb.co/VmTf7h3/Snipe-Now-02.png)
-![Image 2](https://i.ibb.co/QcZCgBq/Snipe-Now-02.png) 
-![Image 3](https://i.ibb.co/V3RWrc9/Snipe-Now-02.png)
-![Image 4](https://i.ibb.co/9W5dxmh/Snipe-Now-02.png) 
+![Image 1](https://i.ibb.co/V3jKfJs/QSnipe-Now-02.jpg)
+![Image 2](https://i.ibb.co/bm43bbZ/QSnipe-Now-02.jpg) 
+![Image 3](https://i.ibb.co/XZ9KkMd/QSnipe-Now-02.jpg) 
+![Image 4](https://i.ibb.co/tcj2xkX/QSnipe-Now-02.jpg) 
 
 ## License
 
