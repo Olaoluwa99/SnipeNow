@@ -50,10 +50,10 @@ To get started with SnipeNow, follow these simple steps:
 
 ## Screenshots!
 
-![Image 1](https://i.ibb.co/V3jKfJs/QSnipe-Now-02.jpg)
-![Image 2](https://i.ibb.co/bm43bbZ/QSnipe-Now-02.jpg) 
-![Image 3](https://i.ibb.co/XZ9KkMd/QSnipe-Now-02.jpg) 
-![Image 4](https://i.ibb.co/tcj2xkX/QSnipe-Now-02.jpg) 
+![QSnipeNow-02](https://github.com/Olaoluwa99/SnipeNow/assets/85140182/ff642ad6-76e5-4b24-afc0-73d0796728eb)
+![QSnipeNow-04](https://github.com/Olaoluwa99/SnipeNow/assets/85140182/acf3ab47-f99e-475c-ab0a-47ef30cca49a)
+![QSnipeNow-03](https://github.com/Olaoluwa99/SnipeNow/assets/85140182/13591584-32a5-4ca9-84ad-6800973d4c3c)
+![QSnipeNow-01](https://github.com/Olaoluwa99/SnipeNow/assets/85140182/18ff788a-2909-474e-8176-63d28a097b15)
 
 ## License
 
