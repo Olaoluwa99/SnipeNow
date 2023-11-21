@@ -1,7 +1,6 @@
 # SnipeNow - Android Sniping Tool App
 
-![App Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQhYVhuvprIQljGmoyjgZWBoHILO2IDm2YpQ&usqp=CAU)
-
+![App Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBCfVjl6Qc9Zhr8XOjI7d4v7GMaIKpUyYyhw&usqp=CAU) 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/your-username/snipe-now)](https://github.com/Olaoluwa99/SnipeNow/releases)
 
